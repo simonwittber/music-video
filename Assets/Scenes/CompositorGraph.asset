@@ -1,0 +1,585 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7523033273513530808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d248160761728fe409063f9ef890ff07, type: 3}
+  m_Name: SubtractNode
+  m_EditorClassIdentifier: 
+  guid: 6fd47853-31be-4a09-b70b-5884d7cc0966
+  groupGuid: 
+  position: {x: 884, y: -136}
+  renderEnabled: 1
+  title: SubtractNode
+  isPinned: 0
+  pinnedPosition: {x: 0, y: 0}
+  _nodeUIState:
+    m_isExpanded: 1
+  portedFieldsContainer: []
+  m_initialized: 1
+  inputA: {fileID: 0}
+  inputB: {fileID: 0}
+  output: {fileID: 0}
+--- !u!114 &-7404394109772548827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6252785df6b0990419d40c8655ace094, type: 3}
+  m_Name: BlurNode
+  m_EditorClassIdentifier: 
+  guid: f94b34aa-a179-4acf-a963-e676150f95ee
+  groupGuid: 
+  position: {x: 313.6, y: 168.8}
+  renderEnabled: 1
+  title: BlurNode
+  isPinned: 0
+  pinnedPosition: {x: 0, y: 0}
+  _nodeUIState:
+    m_isExpanded: 1
+  portedFieldsContainer: []
+  m_initialized: 1
+  m_exposeAsComponent: 0
+  m_config:
+    blurRadius: 0
+    radius: {x: 2, y: 2}
+    rotation: 0
+    numPasses: 1
+  m_proxy: {fileID: 0}
+  m_size:
+    m_outputSize: 0
+    m_customValue: {x: 1920, y: 1080}
+    x: 0
+    y: 0
+    m_version: 2
+  m_mode: 2
+  m_uniformRadius: 1
+  m_input: {fileID: 0}
+  m_output: {fileID: 0}
+  m_blurNodeVersion: 2
+--- !u!114 &-5839851297039359398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d5921db1d18c54bbd6c8a94376a933, type: 3}
+  m_Name: LayerNode
+  m_EditorClassIdentifier: 
+  guid: 84083d46-a0f9-4028-ab21-1c6f80deabbc
+  groupGuid: 
+  position: {x: 0, y: 0}
+  renderEnabled: 1
+  title: LayerNode
+  isPinned: 0
+  pinnedPosition: {x: 0, y: 0}
+  _nodeUIState:
+    m_isExpanded: 1
+  portedFieldsContainer: []
+  m_initialized: 1
+  m_exposeAsComponent: 0
+  m_config:
+    opacity: 1
+  m_proxy: {fileID: 0}
+  enabled: 1
+  blendMode: 17
+  useInputAlpha: 1
+  maskChannel: 3
+  premultipliedAlpha: 0
+  m_exportMode: 0
+  m_rtExporter:
+    m_exportRenderTexture:
+      overrideState: 1
+      value: {fileID: 0}
+--- !u!114 &-5110422661126791512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd54056a23d0e6e42ac3033150305e31, type: 3}
+  m_Name: '66e66ff8-bed5-4fbc-b64b-0aee402aa8df: HSVNode.output -> LayerNode.input'
+  m_EditorClassIdentifier: 
+  input: {fileID: -1675921651569820408}
+  output: {fileID: 8068588034940507511}
+  inputFieldName: input
+  outputFieldName: output
+  guid: 66e66ff8-bed5-4fbc-b64b-0aee402aa8df
+  useProperty: 0
+--- !u!114 &-4483687783583472703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd54056a23d0e6e42ac3033150305e31, type: 3}
+  m_Name: 'a5e6d6e0-7fce-4ad7-bb65-fe0e91b7b7f0: RenderingNode.matte -> SubtractNode.inputA'
+  m_EditorClassIdentifier: 
+  input: {fileID: -7523033273513530808}
+  output: {fileID: -1899037779122696561}
+  inputFieldName: inputA
+  outputFieldName: matte
+  guid: a5e6d6e0-7fce-4ad7-bb65-fe0e91b7b7f0
+  useProperty: 1
+--- !u!114 &-4278068243466282618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd54056a23d0e6e42ac3033150305e31, type: 3}
+  m_Name: 'c6ce2356-22ff-429c-8ca2-4b130a047355: AddNode.output -> MotionBlur.input'
+  m_EditorClassIdentifier: 
+  input: {fileID: 3301301681836607082}
+  output: {fileID: 8535620860492014246}
+  inputFieldName: input
+  outputFieldName: output
+  guid: c6ce2356-22ff-429c-8ca2-4b130a047355
+  useProperty: 0
+--- !u!114 &-4216995118891024442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd54056a23d0e6e42ac3033150305e31, type: 3}
+  m_Name: '46ca9d00-530f-4af8-9da2-a7dfd508f6f8: RenderingNode.matte -> BlurNode.m_input'
+  m_EditorClassIdentifier: 
+  input: {fileID: -7404394109772548827}
+  output: {fileID: -1899037779122696561}
+  inputFieldName: m_input
+  outputFieldName: matte
+  guid: 46ca9d00-530f-4af8-9da2-a7dfd508f6f8
+  useProperty: 1
+--- !u!114 &-2597511992733996806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9779f53e630a84faf68e7bcfd34009, type: 3}
+  m_Name: Texture2DNode
+  m_EditorClassIdentifier: 
+  guid: a3bf8c5e-697e-4a8d-a896-86c823115578
+  groupGuid: 
+  position: {x: 1332, y: 716}
+  renderEnabled: 1
+  title: Texture2DNode
+  isPinned: 0
+  pinnedPosition: {x: 0, y: 0}
+  _nodeUIState:
+    m_isExpanded: 1
+  portedFieldsContainer: []
+  m_initialized: 1
+  m_texture: {fileID: 2800000, guid: e515bf9d284dc974788ac5b7ba3599d0, type: 3}
+  m_outputSize:
+    m_outputSize: 0
+    m_customValue: {x: 0, y: 0}
+    x: 0
+    y: 0
+    m_version: 2
+  output: {fileID: 0}
+--- !u!114 &-1899037779122696561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60a04a9172dea34da5cc24c941eb990, type: 3}
+  m_Name: RenderingNode
+  m_EditorClassIdentifier: 
+  guid: 2089a34e-18dc-43d8-bc63-893627f0aed7
+  groupGuid: 
+  position: {x: -288.8, y: -128.8}
+  renderEnabled: 1
+  title: RenderingNode
+  isPinned: 0
+  pinnedPosition: {x: 0, y: 0}
+  _nodeUIState:
+    m_isExpanded: 1
+  portedFieldsContainer: []
+  m_initialized: 1
+  m_runtimeGraphicsFormat: 48
+  size:
+    m_outputSize: 0
+    m_customValue: {x: 1920, y: 1080}
+    x: 0
+    y: 0
+    m_version: 2
+  camera:
+    exposedName: 045dcf8f5b77928419f3366c192dd018
+    defaultValue: {fileID: 0}
+  _renderMaterial:
+    overrideState: 0
+    value: {fileID: 0}
+  _lightShadows:
+    overrideState: 0
+    value: 0
+  includeChildRenderers: 1
+  output: {fileID: 0}
+  _cullingMask:
+    overrideState: 0
+    value:
+      serializedVersion: 2
+      m_Bits: 4294967295
+  clearFlags:
+    overrideState: 0
+    value: 2
+  backgroundColor:
+    overrideState: 0
+    value: {r: 0, g: 0, b: 0, a: 1}
+  forceBackgroundAlphaToZero: 0
+--- !u!114 &-1675921651569820408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d5921db1d18c54bbd6c8a94376a933, type: 3}
+  m_Name: LayerNode
+  m_EditorClassIdentifier: 
+  guid: b646317f-fb25-48c0-8bbe-7a63efb38f8a
+  groupGuid: 
+  position: {x: 0, y: 0}
+  renderEnabled: 1
+  title: LayerNode
+  isPinned: 0
+  pinnedPosition: {x: 0, y: 0}
+  _nodeUIState:
+    m_isExpanded: 1
+  portedFieldsContainer: []
+  m_initialized: 1
+  m_exposeAsComponent: 0
+  m_config:
+    opacity: 1
+  m_proxy: {fileID: 0}
+  enabled: 1
+  blendMode: 17
+  useInputAlpha: 1
+  maskChannel: 3
+  premultipliedAlpha: 0
+  m_exportMode: 0
+  m_rtExporter:
+    m_exportRenderTexture:
+      overrideState: 1
+      value: {fileID: 0}
+--- !u!114 &-1085170715296210826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd54056a23d0e6e42ac3033150305e31, type: 3}
+  m_Name: 'e61f594a-237d-49e4-9c4b-c6fa803788e5: MotionBlur.output -> LayerNode.input'
+  m_EditorClassIdentifier: 
+  input: {fileID: -5839851297039359398}
+  output: {fileID: 3301301681836607082}
+  inputFieldName: input
+  outputFieldName: output
+  guid: e61f594a-237d-49e4-9c4b-c6fa803788e5
+  useProperty: 0
+--- !u!114 &-1058592452940302217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd54056a23d0e6e42ac3033150305e31, type: 3}
+  m_Name: '0377767a-c91d-4bb2-a423-80b49790fc64: SubtractNode.output -> AudioSpectrumVisualizer.input'
+  m_EditorClassIdentifier: 
+  input: {fileID: 822976674188733571}
+  output: {fileID: -7523033273513530808}
+  inputFieldName: input
+  outputFieldName: output
+  guid: 0377767a-c91d-4bb2-a423-80b49790fc64
+  useProperty: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a5ba7e25024bdc8c2b08d4ce788a16, type: 3}
+  m_Name: CompositorGraph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -1899037779122696561}
+  - {fileID: -7523033273513530808}
+  - {fileID: -7404394109772548827}
+  - {fileID: 3301301681836607082}
+  - {fileID: 822976674188733571}
+  - {fileID: 8535620860492014246}
+  - {fileID: -2597511992733996806}
+  - {fileID: 8068588034940507511}
+  edges:
+  - {fileID: -4483687783583472703}
+  - {fileID: -4216995118891024442}
+  - {fileID: 2681768281642587559}
+  - {fileID: 7178684246117534473}
+  - {fileID: 7199809383518282499}
+  - {fileID: 4127275185705259986}
+  - {fileID: -4278068243466282618}
+  - {fileID: -1058592452940302217}
+  - {fileID: -1085170715296210826}
+  - {fileID: 7034104954663034839}
+  - {fileID: -5110422661126791512}
+  layers:
+  - {fileID: -1675921651569820408}
+  - {fileID: -5839851297039359398}
+  groups: []
+  layerStackPosition: {x: 2590.4, y: 71.2}
+  m_isInitialized: 1
+  rootGraph: {fileID: 11400000}
+  snapshotPaths: []
+  _compositorGraphVersion: 1
+  bookmarks: []
+--- !u!114 &822976674188733571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9efa045d8d074cfa9a3a4c109f10a5c4, type: 3}
+  m_Name: AudioSpectrumVisualizer
+  m_EditorClassIdentifier: 
+  guid: 75f25235-efd6-4bea-ab39-0b3e7524e189
+  groupGuid: 
+  position: {x: 924, y: 340}
+  renderEnabled: 1
+  title: AudioSpectrumVisualizer
+  isPinned: 0
+  pinnedPosition: {x: 0, y: 0}
+  _nodeUIState:
+    m_isExpanded: 1
+  portedFieldsContainer: []
+  m_initialized: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  center: 0.1
+  scale: 5.39
+--- !u!114 &2681768281642587559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd54056a23d0e6e42ac3033150305e31, type: 3}
+  m_Name: '4de3f7aa-a5a2-49ae-bf93-e8e06c9d8765: BlurNode.m_output -> SubtractNode.inputB'
+  m_EditorClassIdentifier: 
+  input: {fileID: -7523033273513530808}
+  output: {fileID: -7404394109772548827}
+  inputFieldName: inputB
+  outputFieldName: m_output
+  guid: 4de3f7aa-a5a2-49ae-bf93-e8e06c9d8765
+  useProperty: 0
+--- !u!114 &3301301681836607082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d31f72a825b19f4abe5a4f7c435eab7, type: 3}
+  m_Name: MotionBlur
+  m_EditorClassIdentifier: 
+  guid: 2ea19a96-6e6c-4ba5-99e7-909eb6600d0d
+  groupGuid: 
+  position: {x: 1829.6, y: -233.6}
+  renderEnabled: 1
+  title: MotionBlur
+  isPinned: 0
+  pinnedPosition: {x: 0, y: 0}
+  _nodeUIState:
+    m_isExpanded: 1
+  portedFieldsContainer: []
+  m_initialized: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  blurBuffer: {fileID: 0}
+  fade: 0.9
+--- !u!114 &4127275185705259986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd54056a23d0e6e42ac3033150305e31, type: 3}
+  m_Name: '4e0f6108-7639-4e2d-8915-0e45fbb8c6d8: AudioSpectrumVisualizer.output ->
+    AddNode.inputB'
+  m_EditorClassIdentifier: 
+  input: {fileID: 8535620860492014246}
+  output: {fileID: 822976674188733571}
+  inputFieldName: inputB
+  outputFieldName: output
+  guid: 4e0f6108-7639-4e2d-8915-0e45fbb8c6d8
+  useProperty: 0
+--- !u!114 &7034104954663034839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd54056a23d0e6e42ac3033150305e31, type: 3}
+  m_Name: 'b93678c7-e959-4848-b2c6-53dce9241857: Texture2DNode.output -> HSVNode.input'
+  m_EditorClassIdentifier: 
+  input: {fileID: 8068588034940507511}
+  output: {fileID: -2597511992733996806}
+  inputFieldName: input
+  outputFieldName: output
+  guid: b93678c7-e959-4848-b2c6-53dce9241857
+  useProperty: 0
+--- !u!114 &7178684246117534473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd54056a23d0e6e42ac3033150305e31, type: 3}
+  m_Name: 'ce6a59e7-da0e-47c7-8bfa-29bdfa275df6: SubtractNode.output -> MotionBlur.Input'
+  m_EditorClassIdentifier: 
+  input: {fileID: 3301301681836607082}
+  output: {fileID: -7523033273513530808}
+  inputFieldName: Input
+  outputFieldName: output
+  guid: ce6a59e7-da0e-47c7-8bfa-29bdfa275df6
+  useProperty: 0
+--- !u!114 &7199809383518282499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd54056a23d0e6e42ac3033150305e31, type: 3}
+  m_Name: '8cab31e3-b7a5-4f09-8d74-cea1d1d70055: SubtractNode.output -> AddNode.inputA'
+  m_EditorClassIdentifier: 
+  input: {fileID: 8535620860492014246}
+  output: {fileID: -7523033273513530808}
+  inputFieldName: inputA
+  outputFieldName: output
+  guid: 8cab31e3-b7a5-4f09-8d74-cea1d1d70055
+  useProperty: 0
+--- !u!114 &8068588034940507511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e41cc9c44229a45812471ce72be4e2, type: 3}
+  m_Name: HSVNode
+  m_EditorClassIdentifier: 
+  guid: 3240dc9c-cbc6-40c8-bfb9-e2b9e4f9c9c6
+  groupGuid: 
+  position: {x: 2021.6, y: 716}
+  renderEnabled: 1
+  title: HSVNode
+  isPinned: 0
+  pinnedPosition: {x: 0, y: 0}
+  _nodeUIState:
+    m_isExpanded: 1
+  portedFieldsContainer: []
+  m_initialized: 1
+  m_exposeAsComponent: 0
+  m_config:
+    h: 0.26
+    s: 0.16
+    v: 0.02
+  m_proxy: {fileID: 0}
+  input: {fileID: 0}
+  output: {fileID: 0}
+  m_hsvNodeVersion: 1
+  h: 0
+  s: 1
+  v: 1
+--- !u!114 &8535620860492014246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74812af02df84c3d8f6423969ab4f7af, type: 3}
+  m_Name: AddNode
+  m_EditorClassIdentifier: 
+  guid: 2c88a071-0b47-4494-b4d4-5922146a9f2d
+  groupGuid: 
+  position: {x: 1332, y: -47.199997}
+  renderEnabled: 1
+  title: AddNode
+  isPinned: 0
+  pinnedPosition: {x: 0, y: 0}
+  _nodeUIState:
+    m_isExpanded: 1
+  portedFieldsContainer: []
+  m_initialized: 1
+  inputA: {fileID: 0}
+  inputB: {fileID: 0}
+  output: {fileID: 0}
